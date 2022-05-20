@@ -1,0 +1,32 @@
+body{
+    background-color: darkslategrey;
+    font-family: "Trebuchet MS";
+}
+
+thead{
+    position: sticky;
+    top: 0;
+}
+
+table{
+    border-spacing: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    color: aliceblue;
+    text-align: center;
+}
+
+th{
+    background-color: darkcyan;
+    color: aliceblue;
+    height: 30px;
+}
+
+td{
+    background-color: azure;
+    height: 40px;
+    text-align: center;
+}
