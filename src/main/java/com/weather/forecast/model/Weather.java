@@ -7,16 +7,27 @@ import javax.persistence.*;
 public class Weather {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id_weather")
     private long idWeather;
+    @Column(name = "id")
     private long id;
+    @Column(name = "humidity")
     private int humidity;
+    @Column(name = "pressure")
     private float pressure;
+    @Column(name = "st")
     private float st;
+    @Column(name = "description")
     private String description;
+    @Column(name = "temp")
     private float temp;
+    @Column(name = "temp_desc")
     private String tempDesc;
+    @Column(name = "visibility")
     private int visibility;
+    @Column(name = "wind_speed")
     private int wind_speed;
+    @Column(name = "wing_deg")
     private String wing_deg;
 
     public long getId() {

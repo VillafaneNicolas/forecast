@@ -49,7 +49,7 @@ public class Location {
     private String forecast;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_weather", referencedColumnName = "idWeather")
+    @JoinColumn(name = "id_weather", referencedColumnName = "id_Weather")
     private Weather weather;
 
 

@@ -17,7 +17,7 @@ public class LocationController {
 
     @RequestMapping(value = "api/forecast")
     public List<Location> getLocations() throws IOException, InterruptedException {
-
+        //Llamada del servicio que hace el request al API
         return locationService.getLocations();
     }
 

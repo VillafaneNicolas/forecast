@@ -18,6 +18,7 @@ public class LocationDaoImpl implements LocationDao {
     @Override
     public void save(List<Location> locations) {
 
+        //persistimos cada registro de la lista en la base de datos
         for (Location location : locations) {
             entityManager.merge(location);
         }
