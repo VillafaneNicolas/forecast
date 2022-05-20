@@ -10,16 +10,16 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class LocationDaoImpl implements LocationDao{
+public class LocationDaoImpl implements LocationDao {
 
     @PersistenceContext
-    private EntityManager em;
+    private EntityManager entityManager;
 
     @Override
-    public void persistLocations(List<Location> locations) {
+    public void save(List<Location> locations) {
 
-        for(Location location : locations){
-            em.merge(location);
+        for (Location location : locations) {
+            entityManager.merge(location);
         }
 
     }

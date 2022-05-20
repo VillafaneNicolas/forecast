@@ -1,6 +1,5 @@
 package com.weather.forecast.controller;
 
-import com.weather.forecast.dao.LocationDao;
 import com.weather.forecast.model.Location;
 import com.weather.forecast.service.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +16,9 @@ public class LocationController {
     private LocationService locationService;
 
     @RequestMapping(value = "api/forecast")
-    public List<Location> retrieveJson() throws IOException, InterruptedException {
+    public List<Location> getLocations() throws IOException, InterruptedException {
 
-        return locationService.retrieveJson();
+        return locationService.getLocations();
     }
 
 

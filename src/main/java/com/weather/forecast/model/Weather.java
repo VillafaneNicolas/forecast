@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Entity
 public class Weather {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long idWeather;
     private long id;
     private int humidity;
@@ -21,10 +21,6 @@ public class Weather {
 
     public long getId() {
         return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public long getIdWeather() {
@@ -103,19 +99,4 @@ public class Weather {
         this.wing_deg = wing_deg;
     }
 
-    @Override
-    public String toString() {
-        return "Weather{" +
-                "id=" + id +
-                ", humidity=" + humidity +
-                ", pressure=" + pressure +
-                ", st=" + st +
-                ", description='" + description + '\'' +
-                ", temp=" + temp +
-                ", tempDesc='" + tempDesc + '\'' +
-                ", visibility=" + visibility +
-                ", wind_speed=" + wind_speed +
-                ", wing_deg='" + wing_deg + '\'' +
-                '}';
-    }
 }

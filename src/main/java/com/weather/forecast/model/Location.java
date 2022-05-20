@@ -2,11 +2,10 @@ package com.weather.forecast.model;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
 import javax.persistence.*;
 
-@Table(name = "location" )
+@Table(name = "location")
 @Entity
 public class Location {
 
@@ -50,17 +49,12 @@ public class Location {
     private String forecast;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_weather",referencedColumnName = "idWeather")
+    @JoinColumn(name = "id_weather", referencedColumnName = "idWeather")
     private Weather weather;
-
 
 
     public String getId() {
         return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public long getUpdated() {
@@ -120,7 +114,6 @@ public class Location {
     }
 
 
-
     public String getZoom() {
         return zoom;
     }
@@ -161,32 +154,4 @@ public class Location {
         this.weather = weather;
     }
 
-    @Override
-    public String toString() {
-        return "Location{" +
-                "id='" + id + '\'' +
-                ", dist=" + dist +
-                ", lid=" + lid +
-                ", fid=" + fid +
-                ", intNumber=" + intNumber +
-                ", name='" + name + '\'' +
-                ", province='" + province + '\'' +
-                ", lat=" + lat +
-                ", lon=" + lon +
-                ", zoom='" + zoom + '\'' +
-                ", updated=" + updated +
-                ", forecast='" + forecast + '\'' +
-                ", Weather{" +
-                "id=" + id +
-                ", humidity=" + weather.getHumidity() +
-                ", pressure=" + weather.getPressure() +
-                ", st=" + weather.getSt() +
-                ", description='" + weather.getDescription() + '\'' +
-                ", temp=" + weather.getTemp() +
-                ", tempDesc='" + weather.getTempDesc() + '\'' +
-                ", visibility=" + weather.getVisibility() +
-                ", wind_speed=" + weather.getWind_speed() +
-                ", wing_deg='" + weather.getWing_deg() + '\'' +
-                ')'+'}';
-    }
 }

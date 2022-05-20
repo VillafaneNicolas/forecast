@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface LocationDao {
 
-    void persistLocations(List<Location> locations);
+    void save(List<Location> locations);
 
 }
