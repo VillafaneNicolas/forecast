@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.weather.forecast.dao.LocationDao;
 import com.weather.forecast.model.Location;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.net.URI;
@@ -15,7 +15,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.List;
 
-@Repository
+@Service
 public class LocationServiceImpl implements LocationService {
 
     private static final String JSON_API_URL = "https://ws.smn.gob.ar/map_items/weather";
